@@ -9,13 +9,14 @@ import { ProductRepository } from "../model/product.repository";
 }) 
 
 export class StoreComponent {
+
         constructor(private repository : ProductRepository) { }
 
-get products() : Product[] {
+        get products() : Product[] {
     return this.repository.getProducts();
 } 
 
-get categories() : string[] {
+        get categories() : string[] {
         return this.repository.getCategories();
     }
 }
